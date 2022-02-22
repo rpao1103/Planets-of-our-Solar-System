@@ -98,16 +98,15 @@ function getYourPlanetWeight(weight, planet){
     }
   }
   if(planetGravityVal == 0){ 
-    return "Inputs invalid. Please submit a valid planet name and positive weight value.";
+    return "No planet found. Please check to make sure the parameters are valid. Enter a valid planet name and a positive weight value. "
   }
   if (!(weight > 0)){
-    return "Inputs are invalid. Please submit a positive weight value."
+    return "No planet found. Please check to make sure the parameters are valid. Enter a valid planet name and a positive weight value. "
   }
   finalWeight = Number((planetGravityVal/9.8) * weight);
   return finalWeight;
 }
      
-
 
 
 
