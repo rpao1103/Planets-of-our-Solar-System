@@ -30,8 +30,8 @@ function getURL(selectedPlanet){
 //return biggestPlanetName {string} - returns the name of the biggest planet. 
 function getBiggestPlanet(){
   var maxPlanetSize = 0; 
-  var bigPlanetSizes = []; //stores the sizes of all the planets
-  var biggestPlanetName = ""; //stores the single name of the biggest planet.
+  var bigPlanetSizes = []; 
+  var biggestPlanetName = ""; 
   for (var i = 0; i < planetName.length; i++){
     maxPlanetSize = Number(density[i]) + Number(diameter[i]);
     bigPlanetSizes.push(maxPlanetSize);
@@ -105,8 +105,9 @@ function getYourPlanetWeight(weight, planet){
   }
   finalWeight = Number((planetGravityVal/9.8) * weight);
   return finalWeight;
-}
-     
+} 
+
+
 
 
 
