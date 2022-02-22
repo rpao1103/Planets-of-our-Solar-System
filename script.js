@@ -97,14 +97,16 @@ function getYourPlanetWeight(weight, planet){
       planetGravityVal = gravity[i];
     }
   }
-  if(planetGravityVal == 0){ //this is returning if the planet entered is invlaid. what about if the weight inputted is invalid. as in its not a number. its a string. make sure the only number that can be entered are positive. 
-    return "Inputs invalid. Please submit just your weight and a valid planet name.";
+  if(planetGravityVal == 0){ 
+    return "Inputs invalid. Please submit a valid planet name and positive weight value.";
   }
-  finalWeight = Number((planetGravityVal/10) * weight);
+  if (!(weight > 0)){
+    return "Inputs are invalid. Please submit a positive weight value."
+  }
+  finalWeight = Number((planetGravityVal/9.8) * weight);
   return finalWeight;
 }
      
-console.log(getYourPlanetWeight(-3, "Earth"));
 
 
 
