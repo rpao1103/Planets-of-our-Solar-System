@@ -1,12 +1,16 @@
-const url = "https://raw.githubusercontent.com/rpao1103/Planets-of-our-Solar-System/main/Planets%20of%20our%20Solar%20System%20(2).csv";
+const url = "https://raw.githubusercontent.com/rpao1103/PlanetsOfOurSolarSystem/main/Planets%20of%20our%20Solar%20System%20(2).csv";
+
+
 
 
 const density = getColumn(url,3);
 const diameter = getColumn(url,2);
-const planetName = getColumn(url,1);
+const planetName = getColumn(url,2);
 const planetURL = getColumn(url, 15);
 const lengthOfDay = getColumn(url,6);
 const gravity = getColumn(url, 4);
+
+
 
 
 //A function that prints the url of the planet's image inputted by the user. 
@@ -23,6 +27,7 @@ function getURL(selectedPlanet){
     }
     return "Please try again and enter a valid planet name.";
 }
+
 
 
 
@@ -60,14 +65,17 @@ function getSmallestPlanet(){
     smallPlanetSizes.push(minPlanetSize);
   }
   minPlanetSize = smallPlanetSizes[0];
+  smallestPlanetName = planetName[0];
   for (var i = 0; i < smallPlanetSizes.length; i++){
     if (smallPlanetSizes[i] < minPlanetSize){
       minPlanetSize = smallPlanetSizes[i];
       smallestPlanetName = planetName[i];
+      
     }
   }
   return smallestPlanetName;
 }
+
 
 
 
@@ -81,6 +89,7 @@ function findAvgDay(){
   var avgDayVal = sum / lengthOfDay.length;
   return avgDayVal; 
 }
+
 
 
 
@@ -106,9 +115,6 @@ function getYourPlanetWeight(weight, planet){
   finalWeight = Number((planetGravityVal/9.8) * weight);
   return finalWeight;
 } 
-
-
-
 
 
 
