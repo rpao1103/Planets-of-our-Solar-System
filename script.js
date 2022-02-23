@@ -5,7 +5,7 @@ const url = "https://raw.githubusercontent.com/rpao1103/PlanetsOfOurSolarSystem/
 
 const density = getColumn(url,3);
 const diameter = getColumn(url,2);
-const planetName = getColumn(url,2);
+const planetName = getColumn(url,1);
 const planetURL = getColumn(url, 15);
 const lengthOfDay = getColumn(url,6);
 const gravity = getColumn(url, 4);
